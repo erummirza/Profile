@@ -42,3 +42,9 @@
 ![Healthcare IT](https://img.shields.io/badge/Healthcare_IT-E51837?style=for-the-badge&logo=redcross&logoColor=white)
 ![CRM Integration](https://img.shields.io/badge/CRM_Integration-00A1E0?style=for-the-badge&logo=salesforce&logoColor=white)
 ![Android Certified](https://img.shields.io/badge/Android_(Certified)-3DDC84?style=for-the-badge&logo=android&logoColor=white)
+
+## 🚀 Learning Progress
+
+✅ Project 1: [LocalAIChat](link) - Basic AI Chatbot
+✅ Project 2: [LocalAIChatMemory](link) - AI with Conversation Memory
+⏳ Project 3: RAG (Coming Soon)
