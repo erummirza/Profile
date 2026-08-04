@@ -369,8 +369,37 @@
   .domain-infra   { background: #2E251A; color: #F0B849; border: 1px solid #4A3A1A; }
   .domain-legacy  { background: #2E1A1A; color: #FF9E64; border: 1px solid #4A2A1A; }
   .domain-web     { background: #1A2A2E; color: #6FE3D8; border: 1px solid #2A4A4A; }
+  .domain-ai      { background: #1A1F2E; color: #A5B4FC; border: 1px solid #2F3A6A; }
   .project-name { font-size: 15px; font-weight: 600; margin-bottom: 6px; color: var(--text); }
   .project-desc { font-size: 13px; color: var(--muted); line-height: 1.6; flex: 1; }
+  .project-tags { display: flex; flex-wrap: wrap; gap: 6px; margin-top: 12px; }
+
+  .project-card.is-new {
+    border-color: #4C5FD5;
+    box-shadow: 0 0 0 1px #4C5FD5, 0 0 24px -6px rgba(76,95,213,0.55);
+    position: relative;
+  }
+  .project-card.is-new:hover { border-color: #6C7FFF; }
+  .new-ribbon {
+    position: absolute;
+    top: -10px; right: 14px;
+    background: linear-gradient(90deg, #4C5FD5, #8B5CF6);
+    color: #fff;
+    font-family: var(--mono);
+    font-size: 10px;
+    font-weight: 700;
+    letter-spacing: 0.05em;
+    padding: 3px 10px;
+    border-radius: 100px;
+    box-shadow: 0 2px 8px rgba(76,95,213,0.5);
+  }
+  .project-name a.repo-link {
+    font-size: 12px;
+    font-family: var(--mono);
+    color: var(--accent);
+    margin-left: 6px;
+    font-weight: 400;
+  }
 
   .industries { display: flex; gap: 12px; flex-wrap: wrap; }
   .industry-pill {
@@ -484,6 +513,7 @@
     <span class="badge">🌍 Remote Ready</span>
     <span class="badge">📱 Android Certified</span>
     <span class="badge">⚡ Flash ActionScript</span>
+    <span class="badge" style="background:#1A1F2E;color:#A5B4FC;border-color:#2F3A6A;">🤖 Now exploring: AI / Ollama</span>
   </div>
   <div class="hero-cta">
     <a class="btn btn-primary" href="mailto:mirza.erum@gmail.com">✉ Contact</a>
@@ -578,6 +608,12 @@
         <span class="skill-tag">CLIA Compliance</span><span class="skill-tag">T24 Core Banking</span>
         <span class="skill-tag">Android Dev</span><span class="skill-tag">Git</span>
         <span class="skill-tag">VB6 Modernization</span>
+      </div>
+    </div>
+    <div class="skill-card">
+      <div class="skill-card-label">AI / LLM</div>
+      <div class="skill-tags">
+        <span class="skill-tag">Ollama</span><span class="skill-tag">llama3.2 model</span>
       </div>
     </div>
   </div>
@@ -711,7 +747,7 @@
 
     <div class="project-card">
       <span class="project-domain domain-health">Healthcare IT</span>
-      <div class="project-name">Innovative Lab — LabTasks USA <a href=https://www.labtasks.com/>LabTasks </a></div>
+      <div class="project-name">Innovative Lab — LabTasks USA <a href=https://www.labtasks.com/>LabTasks </a><a class="repo-link" href="https://github.com/erummirza/LabTask" target="_blank">GitHub ↗</a></div>
       <div class="project-desc">Remote healthcare software development — CLIA-compliant medical lab automation on .NET, automating instrument tracking, competency management, and hospital communications.</div>
     </div>
 
@@ -767,8 +803,32 @@
     <!-- NEW: Blog / Social Media MERN Application -->
     <div class="project-card">
       <span class="project-domain domain-web">MERN Stack</span>
-      <div class="project-name">Blog &amp; Social Media Application</div>
+      <div class="project-name">Blog &amp; Social Media Application <a class="repo-link" href="https://github.com/erummirza/social-media" target="_blank">GitHub ↗</a></div>
       <div class="project-desc">Full-stack blog and social networking platform built on the MERN stack (MongoDB, Express.js, React, Node.js). Features include user authentication, post creation with rich text and image uploads, likes and comments, follower/following relationships, and a personalized activity feed — with a RESTful API backend and JWT-secured sessions.</div>
+    </div>
+
+    <!-- NEW: LocalAIChat -->
+    <div class="project-card is-new">
+      <span class="new-ribbon">✨ Recently added</span>
+      <span class="project-domain domain-ai">AI / LLM</span>
+      <div class="project-name">LocalAIChat <a class="repo-link" href="https://github.com/erummirza/LocalAIChat" target="_blank">GitHub ↗</a></div>
+      <div class="project-desc">Basic AI chatbot running entirely on local infrastructure — sends single-turn prompts to a locally hosted LLM (llama3.2) via Ollama's REST API, using HttpClient and System.Text.Json for serialization.</div>
+      <div class="project-tags">
+        <span class="skill-tag">.NET 9</span><span class="skill-tag">Ollama</span>
+        <span class="skill-tag">HttpClient</span><span class="skill-tag">System.Text.Json</span>
+      </div>
+    </div>
+
+    <!-- NEW: LocalAIChatMemory -->
+    <div class="project-card is-new">
+      <span class="new-ribbon">✨ Recently added</span>
+      <span class="project-domain domain-ai">AI / LLM</span>
+      <div class="project-name">LocalAIChatMemory <a class="repo-link" href="https://github.com/erummirza/LocalAIChatMemory" target="_blank">GitHub ↗</a></div>
+      <div class="project-desc">Extends LocalAIChat with in-memory conversation history — maintains a List&lt;ChatMessage&gt; across turns and calls Ollama's /api/chat endpoint, so the local LLM retains context throughout the session.</div>
+      <div class="project-tags">
+        <span class="skill-tag">.NET 9</span><span class="skill-tag">Ollama</span>
+        <span class="skill-tag">Conversation Memory</span><span class="skill-tag">/api/chat</span>
+      </div>
     </div>
 
   </div>
